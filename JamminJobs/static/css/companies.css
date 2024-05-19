@@ -1,0 +1,63 @@
+.company-card {
+    border: solid 1px black;
+    margin: 12px auto;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.company-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.company-card h5, .company-card p, .company-card a {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.see-more-button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.see-more-button:hover {
+    background-color: #009acd;
+}
+
+@media (max-width: 768px) {
+    .company-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-card h5, .company-card p, .company-card a {
+        width: 100%;
+        text-align: center;
+    }
+}

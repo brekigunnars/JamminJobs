@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %} Sign Up {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/css/loginstyle.css' %}?{% now 'U' %}">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Log In</h1>
+                <br>
+                <div class="login-container">
+                    <a href="{% url 'login' %}"><strong>Log In</strong></a>
+                </div>
+            </section>
+        </div>
+        <div class="right">
+            <form class="form-container" method="POST" action="{% url 'signup' %}">
+                {% csrf_token %}
+		{{form.as_p}}
+                <button class="login-btn" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}
